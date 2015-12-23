@@ -1,0 +1,5 @@
+.Rbuildignore
+.Rhistory
+bionexr.Rproj
+.Rproj.user/
+.RData

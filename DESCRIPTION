@@ -1,0 +1,20 @@
+Package: bionexr
+Title: Integrative network-based analysis of cancer somatic mutation and expression data
+Version: 0.99.0
+Authors@R: person("Yang", "Shuai", email = "yannis.pku@gmail.com", 
+    role = c("aut", "cre"))
+Description: Bionexr implements protein-protein interaction (PPI)-based and pathway-based algorithms respectively, for prioritizing candidate genes and processes involved in tumorigenesis, and visualizing the result in a user-friendly plot.
+Depends: R (>= 3.2.1)
+License: GPL-3
+LazyData: true
+Suggests: 
+    doParallel,
+    foreach,
+    knitr
+Imports: 
+    RCurl,
+    XML,
+    reshape2,
+    igraph,
+    DESeq2
+VignetteBuilder: knitr

@@ -13,7 +13,7 @@ Bionexr is consisted of four main modules:
 - Network Analysis
 - Visualization
 
-<img src = "../fig/overview.png" width = "600" align = "center" />
+<img src = "https://raw.githubusercontent.com/ys-amms/bionexr/master/fig/overview.png" width = "600" align = "center" />
 
 ## Installation
 ### Hardware requirements
@@ -52,7 +52,7 @@ Follow the instructions below:
 
 	And the result would look like below, note that your running result might have a different layout, that's OK:
 
-<img src = "../fig/f1.png" width = "600" align = "center" />
+<img src = "https://raw.githubusercontent.com/ys-amms/bionexr/master/fig/f1.png" width = "600" align = "center" />
 
 - For pathway-based approach, follow the instructions below:
 
@@ -63,7 +63,7 @@ Follow the instructions below:
 
 	And the result would look like below, note that your running result might have a different layout, that's OK:
 
-<img src = "../fig/f2.png" width = "600" align = "center" />
+<img src = "https://raw.githubusercontent.com/ys-amms/bionexr/master/fig/f2.png" width = "600" align = "center" />
 
 ## Usage
 ### Download cancer genome data using "Data Download" module

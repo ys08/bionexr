@@ -29,9 +29,19 @@ Bionexr is consisted of four main modules:
 - VignetteBuilder: knitr
 
 ### How to install
-Follow the instructions below:
+First, please install "DESeq2" package from BioConductor. To install "DESeq2", start R and enter:
 
-    devtools::install_github(ys-amms/bionexr)
+	source("https://bioconductor.org/biocLite.R")
+	biocLite("DESeq2")
+Second, please install "devtools" package (see [devtools github](https://github.com/hadley/devtools) for more information). To install devtools from CRAN, please run:
+
+	install.packages("devtools")
+
+Finnaly, follow the instructions below to download latest version of bionexr:
+
+    devtools::install_github("ys-amms/bionexr", build_vignettes = TRUE)
+
+Users can browse the vignette by running `browseVignettes("bionexr")`
 
 ## Quick Start
 

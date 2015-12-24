@@ -60,7 +60,7 @@ Users can browse the vignette by running `browseVignettes("bionexr")`
 		plot_ppi(g)
 
 
-	And the result would look like below, note that your running result might have a different layout, that's OK:
+	And the result would look like below, note that your running result might have a different layout, that's OK. Mutated genes are labeled with their gene symbols, colored nodes denote differentially expressed genes, and edges represent neighbor relationship of protein-protein interaction network between genes. 
 
 <img src = "https://raw.githubusercontent.com/ys-amms/bionexr/master/fig/f1.png" width = "600" align = "center" />
 
@@ -71,7 +71,7 @@ Users can browse the vignette by running `browseVignettes("bionexr")`
 		g <- network_from_significant_branches(res.network)
 		plot_pathway(g)
 
-	And the result would look like below, note that your running result might have a different layout, that's OK:
+	And the result would look like below, note that your running result might have a different layout, that's OK. The figure shows a hierarchical network, red nodes in top layer denote mutated genes, blue nodes in middle layer denote activated transcription factors, and green nodes in bottom layer denote up-regulated target genes.
 
 <img src = "https://raw.githubusercontent.com/ys-amms/bionexr/master/fig/f2.png" width = "600" align = "center" />
 

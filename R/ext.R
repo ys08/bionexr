@@ -84,7 +84,7 @@ fast_search_madb <- function(ids, madb = stop("'madb' must be specified")) {
   idx <- ids %in% names(madb)
   N <- length(ids)
   
-  if(requireNamespace("doParallel", quietly = TRUE) && memory.limit() >= 80000) {
+  if(requireNamespace("doParallel", quietly = TRUE) && Sys.info()["sysname"] == "Windows" && memory.limit() >= 80000) {
     n_cores <- 2
     cl <- parallel::makeCluster(n_cores)
     doParallel::registerDoParallel(cl)

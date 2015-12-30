@@ -20,7 +20,7 @@ Bionexr is consisted of four main modules:
 **Important: Read First**
 
 - PC with 8G RAM or above is recommended
-- Tested on Windows, not tested on Unix-like OS
+- Passed test on Windows 8.1, Ubuntu 14.04, OS X 10.11.2
 
 ### Software requirements
 - Depends: R (>= 3.2.1)

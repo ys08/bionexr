@@ -22,7 +22,7 @@ Bionexr is consisted of four main modules:
 - Network Analysis
 - Visualization
 
-<img src = "../fig/overview.JPG" width = "700" align = "center" />
+<img src = "../fig/overview.jpg" width = "700" align = "center" />
 
 ## Quick Start
 

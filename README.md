@@ -13,7 +13,7 @@ Bionexr is consisted of four main modules:
 - Network Analysis
 - Visualization
 
-<img src = "https://raw.githubusercontent.com/ys-amms/bionexr/master/fig/overview.JPG" width = "700" align = "center" />
+<img src = "https://raw.githubusercontent.com/ys-amms/bionexr/master/fig/overview.jpg" width = "700" align = "center" />
 
 ## Installation
 ### Hardware requirements

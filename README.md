@@ -1,8 +1,8 @@
-# Bionexr: a R package for integrative network-based analysis of cancer somatic mutation and expression data
+# Bionexr: an R package for integrative network-based analysis of gene somatic mutation and gene expression data to identify cancer drivers
 
-Cancer genome projects have generated massive genome and transcriptome sequencing data, which makes tumor-specific alterations such as somatic mutation and gene expression information easily available. Due to the lack of tools for subsequently integrating these complex information, we implement an R package “bionexr” that uses network to integrate and analyze cancer somatic mutation and expression data. Bionexr provides these features:
+Cancer genome projects have generated massive genome and transcriptome sequencing data, which makes tumor-specific alterations such as somatic mutation and gene expression information easily available. To distinguish cancer drivers from passengers, we implement an R package “Bionexr” for integrative network-based analysis of gene somatic mutation and expression data. Bionexr provides these features:
 
-- A protein-protein interaction (PPI)-based approach
+- A protein-protein interaction (PPIN)-based approach
 - A pathway-based appoach
 - Visualization of the results
 
@@ -37,7 +37,7 @@ Second, please install "devtools" package (see [devtools github](https://github.
 
 	install.packages("devtools")
 
-Finnaly, follow the instructions below to download latest version of bionexr:
+Finnaly, follow the instructions below to download latest version of Bionexr:
 
     devtools::install_github("ys-amms/bionexr", build_vignettes = TRUE)
 
@@ -45,14 +45,14 @@ Users can browse the vignette by running `browseVignettes("bionexr")`
 
 ## Quick Start
 
-- First, run the following instructions. Note that if it is the first time to use bionexr, `prepare_ma()` will take some time to download the dataset used by gene module.
+- First, run the following instructions. Note that if it is the first time to use Bionexr, `prepare_ma()` will take some time to download the dataset used by gene module.
 
 
 		library(bionexr)
     	prepare_ma() 
 
 
-- For PPI-based approach, follow the instructions below:
+- For PPIN-based approach, follow the instructions below:
 
 		res.gene <- perform_gene_ppi(hnsc_mut_part, hnsc_exp_part)
 		res.network <- perform_network_ppi(res.gene[[2]], res.gene[[3]])  
@@ -93,11 +93,11 @@ Users can browse the vignette by running `browseVignettes("bionexr")`
     hnsc_exp <- exp_data[, (exp_sample_ids %in% common_case) | exp_control]
 
 ### Using "Gene Analysis" module
-`perform_gene_ppi` and `perform_gene_pathway` are the two main commands for performing "Gene Analysis". As you can guess from the function name, `perform_gene_ppi` is for PPI-based approach and `perform_gene_pathway` is for pathway-based approach.
+`perform_gene_ppi` and `perform_gene_pathway` are the two main commands for performing "Gene Analysis". As you can guess from the function name, `perform_gene_ppi` is for PPIN-based approach and `perform_gene_pathway` is for pathway-based approach.
 
 See the instructions below, note that `hnsc_mut` and `hnsc_exp` are from "Data Download" module:
 
-- For PPI-based approach
+- For PPIN-based approach
 
 		ppi.gene <- perform_gene_ppi(hnsc_mut, hnsc_exp)
 - For pathway-based approach
@@ -107,11 +107,11 @@ See the instructions below, note that `hnsc_mut` and `hnsc_exp` are from "Data D
 Note that before performing "Gene Analysis", run command `prepare_ma()` first. This module would take a few time to finish, drink some coffee happily.
 
 ### Using "Network Analysis" module
-`perform_network_ppi` and `perform_network_pathway` are the two main commands for performing "Network Analysis". As the same to "Gene Analysis" module, `perform_network_ppi` is for PPI-based approach and `perform_network_pathway` is for pathway-based approach.
+`perform_network_ppi` and `perform_network_pathway` are the two main commands for performing "Network Analysis". As the same to "Gene Analysis" module, `perform_network_ppi` is for PPIN-based approach and `perform_network_pathway` is for pathway-based approach.
 
 See the instructions below, note that `hnsc_exp` is from "Data Download" module, and `ppi.gene` and `pathway.gene` are from "Gene Analysis" module:
 
-- For PPI-based approach
+- For PPIN-based approach
 
 		ppi.network <- perform_network_ppi(ppi.gene[[2]], ppi.gene[[3]])
 - For pathway-based approach
@@ -120,11 +120,11 @@ See the instructions below, note that `hnsc_exp` is from "Data Download" module,
 		pathway.network <- perform_network_pathway(pathway.gene[[2]], pathway.gene[[3]], expressed_genes)
 
 ### Using "Visualization" module
-`plot_ppi` and `plot_pathway` are the two main commands for performing "Visualization" module.`plot_ppi` is for PPI-based approach's result and `plot_pathway` is for pathway-based approach's result.
+`plot_ppi` and `plot_pathway` are the two main commands for performing "Visualization" module.`plot_ppi` is for PPIN-based approach's result and `plot_pathway` is for pathway-based approach's result.
 
 See the instructions below, note that `ppi.network` and `pathway.network` are from "Network Analysis" module:
 
-- For PPI-based approach's result
+- For PPIN-based approach's result
 
 		ppi.g <- network_from_ppi(ppi.network)
 		plot_ppi(ppi.g)
@@ -138,7 +138,7 @@ The commands `perform_main_ppi` and `perform_main_pathway` can perform "Gene Ana
 
 The example instructions are written below, note that `hnsc_mut` and `hnsc_exp` are from "Data Download" module:
 
-- For PPI-based approach
+- For PPIN-based approach
 
 		prepare_ma()  
 		ppi.res <- perform_main_ppi(hnsc_mut, hnsc_exp, jobname = "HNSC", use_cache = TRUE)  

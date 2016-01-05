@@ -86,7 +86,7 @@ Users can browse the vignette by running `browseVignettes("bionexr")`
     exp_data <- exp_data[[1]]
     exp_sample_ids <- colnames(exp_data)
     
-    common_case <- intersect(mut_sample_ids, exp_sample_ids
+    common_case <- intersect(mut_sample_ids, exp_sample_ids)
     exp_control <- grepl("-11$", exp_sample_ids)
     
     hnsc_mut <- mut_data[mut_data[[7]] %in% common_case, ]

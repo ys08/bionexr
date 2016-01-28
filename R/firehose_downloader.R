@@ -189,7 +189,7 @@ prepare_ma <- function() {
   if (file.exists(ma_file)) {
     return()
   }
-  ma_url <- "https://s3-us-west-1.amazonaws.com/bionexr-data/madb.rds"
+  ma_url <- "http://s3-us-west-1.amazonaws.com/bionexr-data/madb.rds"
   download_file(ma_url)
   ret <- file.rename("madb.rds", ma_file)
 }

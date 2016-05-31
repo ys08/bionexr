@@ -10,7 +10,8 @@ LazyData: true
 Suggests: 
     doParallel,
     foreach,
-    knitr
+    knitr,
+    rmarkdown
 Imports: 
     RCurl,
     XML,
